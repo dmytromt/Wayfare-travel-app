@@ -122,11 +122,23 @@
   font-size: 1.4rem;
   list-style: none;
 
+  @media only screen and (max-width: 56.25em) {
+    display: flex;
+    margin: 0;
+  }
+
   &__item {
     position: relative;
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+      @media only screen and (max-width: 56.25em) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media only screen and (max-width: 56.25em) {
+      flex: 1;
     }
   }
 
@@ -163,6 +175,16 @@
     align-items: center;
     position: relative;
     z-index: 10;
+
+    @media only screen and (max-width: 56.25em) {
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    @media only screen and (max-width: 37.5em) {
+      flex-direction: column;
+      padding: 1.5rem 0.5rem;
+    }
   }
 
   &__icon {
@@ -170,6 +192,13 @@
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor;
+
+    @media only screen and (max-width: 37.5em) {
+      margin: 0;
+      margin-bottom: 0.7rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 }
 
@@ -180,6 +209,10 @@
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+
+  @media only screen and (max-width: 56.25em) {
+    display: none;
+  }
 }
 
 // ================= GALLERY ===============//
@@ -206,6 +239,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 2.2rem 3rem;
+
+    @media only screen and (max-width: 37.5em) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
   }
 
   &__stars {
@@ -241,17 +279,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 37.5em) {
+      padding: 0 1.5rem;
+    }
   }
 
   &__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     padding: 0.5rem;
+
+    @media only screen and (max-width: 37.5em) {
+      font-size: 1.8rem;
+    }
   }
 
   &__rating-count {
     font-size: 0.8rem;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 37.5em) {
+      font-size: 0.5rem;
+    }
   }
 }
 
@@ -355,9 +405,10 @@
 
   &__count {
     margin-right: auto;
-  }
 
-  &__friends {
+    &__friends {
+      display: flex;
+    }
   }
 
   &__photo {
@@ -382,6 +433,11 @@
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
+
+  @media only screen and (max-width: 56.25em) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
 
   &__text {
     margin-bottom: 2rem;
@@ -441,6 +497,10 @@
 .cta {
   padding: 3.5rem 0;
   text-align: center;
+
+  @media only screen and (max-width: 56.25em) {
+    padding: 2.5 0rem;
+  }
 
   &__book-now {
     font-size: 2rem;
